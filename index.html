@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Farmácia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <h1>Assistente Virtual da Farmácia</h1>
+        </div>
+        <div id="chat-log" class="chat-log"></div>
+        <div id="chat-suggestions" class="chat-suggestions" style="display: none;">
+            <strong>Sugestões:</strong>
+            <ul id="suggestions-list"></ul>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" class="chat-input" placeholder="Digite sua pergunta aqui..." onkeyup="handleEnter(event)">
+            <button class="chat-button" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const pergunta = document.getElementById('user-input').value.trim();
+            if (!pergunta) return;
+
+            fetch(`/chatbot?pergunta=${encodeURIComponent(pergunta)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const chatLog = document.getElementById('chat-log');
+                    chatLog.innerHTML += `<div class="chat-response"><strong>Você:</strong> ${pergunta}</div>`;
+                    chatLog.innerHTML += `<div class="chat-response"><strong>Assistente:</strong> ${data.resposta}</div>`;
+
+                    // Atualizar sugestões
+                    const suggestionsContainer = document.getElementById('chat-suggestions');
+                    const suggestionsList = document.getElementById('suggestions-list');
+                    suggestionsList.innerHTML = ''; // Limpa sugestões anteriores
+
+                    data.sugestoes.forEach(sugestao => {
+                        suggestionsList.innerHTML += `<li onclick="selectSuggestion('${sugestao}')">${sugestao}</li>`;
+                    });
+
+                    // Mostrar sugestões apenas se houver pelo menos uma
+                    if (data.sugestoes.length > 0) {
+                        suggestionsContainer.style.display = 'block';
+                    } else {
+                        suggestionsContainer.style.display = 'none';
+                    }
+
+                    document.getElementById('user-input').value = '';
+                    chatLog.scrollTop = chatLog.scrollHeight; // Scroll para a parte mais baixa
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+
+        function handleEnter(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function selectSuggestion(sugestao) {
+            document.getElementById('user-input').value = sugestao;
+            sendMessage();
+        }
+    </script>
+</body>
+</html>
