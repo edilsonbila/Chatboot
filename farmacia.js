@@ -13,7 +13,7 @@ function farmaciaActual() {
 
 function guardarEscolha() {
     localStorage.setItem('farmacia_id', select.value);
-    carregarPedidos();
+    carregarPedidos(true);
 }
 
 async function carregarFarmacias() {
@@ -28,7 +28,7 @@ async function carregarFarmacias() {
     }
     if (escolhida) select.value = escolhida;
     select.onchange = guardarEscolha;
-    carregarPedidos();
+    carregarPedidos(true);
 }
 
 function formularioResposta(p) {
@@ -42,9 +42,17 @@ function formularioResposta(p) {
         </form>`;
 }
 
-async function carregarPedidos() {
+function aEditar() {
+    return (
+        lista.contains(document.activeElement) ||
+        [...lista.querySelectorAll('.resposta-form input[type=number], .resposta-form input[type=text]')].some((i) => i.value)
+    );
+}
+
+async function carregarPedidos(forcar = false) {
     const id = farmaciaActual();
     if (!id) return;
+    if (!forcar && aEditar()) return;
     const pedidos = await fetch(`/farmacias/${id}/pedidos`).then((r) => r.json());
     if (!pedidos.length) {
         lista.innerHTML = '<div class="chat-response">Ainda não há pedidos de clientes para esta farmácia.</div>';
@@ -82,10 +90,10 @@ async function carregarPedidos() {
                 alert(erro.erro || 'Erro ao responder');
                 return;
             }
-            carregarPedidos();
+            carregarPedidos(true);
         };
     });
 }
 
 carregarFarmacias();
-setInterval(carregarPedidos, 10000);
+setInterval(() => carregarPedidos(), 10000);
