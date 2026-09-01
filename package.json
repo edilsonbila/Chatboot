@@ -1,0 +1,11 @@
+{
+  "name": "chatbot-farmacia-mocambique",
+  "version": "1.0.0",
+  "description": "Assistente virtual de farmácias em Moçambique: encontra farmácias próximas com um medicamento e mostra preços.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "license": "MIT"
+}

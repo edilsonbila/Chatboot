@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Farmácia</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Assistente de Farmácias - Moçambique</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="chatbot-container">
         <div class="chat-header">
-            <h1>Assistente Virtual da Farmácia</h1>
+            <h1>Assistente de Farmácias</h1>
+            <small id="location-status">A obter a sua localização...</small>
         </div>
         <div id="chat-log" class="chat-log"></div>
         <div id="chat-suggestions" class="chat-suggestions" style="display: none;">
@@ -17,55 +18,10 @@
             <ul id="suggestions-list"></ul>
         </div>
         <div class="chat-input-container">
-            <input type="text" id="user-input" class="chat-input" placeholder="Digite sua pergunta aqui..." onkeyup="handleEnter(event)">
-            <button class="chat-button" onclick="sendMessage()">Enviar</button>
+            <input type="text" id="user-input" class="chat-input" placeholder="Ex.: Onde tem Paracetamol perto de mim?" onkeyup="handleEnter(event)">
+            <button id="send-button" class="chat-button" onclick="sendMessage()">Enviar</button>
         </div>
     </div>
-
-    <script>
-        function sendMessage() {
-            const pergunta = document.getElementById('user-input').value.trim();
-            if (!pergunta) return;
-
-            fetch(`/chatbot?pergunta=${encodeURIComponent(pergunta)}`)
-                .then(response => response.json())
-                .then(data => {
-                    const chatLog = document.getElementById('chat-log');
-                    chatLog.innerHTML += `<div class="chat-response"><strong>Você:</strong> ${pergunta}</div>`;
-                    chatLog.innerHTML += `<div class="chat-response"><strong>Assistente:</strong> ${data.resposta}</div>`;
-
-                    // Atualizar sugestões
-                    const suggestionsContainer = document.getElementById('chat-suggestions');
-                    const suggestionsList = document.getElementById('suggestions-list');
-                    suggestionsList.innerHTML = ''; // Limpa sugestões anteriores
-
-                    data.sugestoes.forEach(sugestao => {
-                        suggestionsList.innerHTML += `<li onclick="selectSuggestion('${sugestao}')">${sugestao}</li>`;
-                    });
-
-                    // Mostrar sugestões apenas se houver pelo menos uma
-                    if (data.sugestoes.length > 0) {
-                        suggestionsContainer.style.display = 'block';
-                    } else {
-                        suggestionsContainer.style.display = 'none';
-                    }
-
-                    document.getElementById('user-input').value = '';
-                    chatLog.scrollTop = chatLog.scrollHeight; // Scroll para a parte mais baixa
-                })
-                .catch(error => console.error('Erro:', error));
-        }
-
-        function handleEnter(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
-        }
-
-        function selectSuggestion(sugestao) {
-            document.getElementById('user-input').value = sugestao;
-            sendMessage();
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
