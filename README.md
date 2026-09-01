@@ -36,3 +36,20 @@ node scripts/importar-farmacias-osm.js --offline  # usa a última resposta guard
 O script também gera `DataBase/farmacias_osm.sql` para carregar as mesmas farmácias em MySQL.
 As farmácias importadas ainda não têm stock/preços registados; o chatbot mostra-as como
 "stock e preço não confirmados" e lista-as em "farmácias perto de mim".
+
+## Pedidos às farmácias próximas
+
+Depois de perguntar por um medicamento, o utilizador pode clicar em **"Perguntar às farmácias próximas"**:
+o sistema cria um pedido (`POST /pedidos`) e envia a pergunta às 5 farmácias mais próximas (raio de 25 km).
+As farmácias respondem no **portal** (`/farmacia.html`) indicando disponibilidade, preço e mensagem, e a resposta
+aparece no chat do utilizador (que faz polling a `GET /pedidos/:id`).
+
+Canal de envio (variável `MENSAGEIRO`):
+
+| Valor | Comportamento |
+|---|---|
+| `console` (padrão) | Regista a mensagem no log; a farmácia vê o pedido no portal. |
+| `twilio` | Envia WhatsApp/SMS via Twilio. Requer `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` e `TWILIO_FROM` (ex.: `whatsapp:+14155238886`). Opcional: `BASE_URL` para o link de resposta. |
+
+Endpoints: `POST /pedidos {pergunta, lat, lng}` · `GET /pedidos/:id` · `GET /farmacias` · `GET /farmacias/:id/pedidos` · `POST /pedidos/:id/respostas {farmacia_id, disponivel, preco, mensagem}`.
+Os pedidos ficam em `data/pedidos.json` (ignorado pelo git).

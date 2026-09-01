@@ -1,4 +1,5 @@
 let userLocation = null;
+const pedidosActivos = {};
 
 function setLocationStatus(text) {
     document.getElementById('location-status').textContent = text;
@@ -15,6 +16,81 @@ function displayMessage(sender, html) {
     el.innerHTML = `<strong>${sender}:</strong> ${html}`;
     chatLog.appendChild(el);
     chatLog.scrollTop = chatLog.scrollHeight;
+    return el;
+}
+
+function formatarPreco(v) {
+    return `${Number(v).toFixed(2).replace('.', ',')} MZN`;
+}
+
+function mostrarBotaoPedido(pergunta) {
+    const el = displayMessage(
+        'Assistente',
+        'Quer que eu envie esta pergunta às farmácias mais próximas de si para confirmarem disponibilidade e preço? '
+    );
+    const btn = document.createElement('button');
+    btn.className = 'chat-button chat-button-inline';
+    btn.textContent = 'Perguntar às farmácias próximas';
+    btn.onclick = () => {
+        btn.disabled = true;
+        criarPedido(pergunta);
+    };
+    el.appendChild(btn);
+}
+
+function criarPedido(pergunta) {
+    const corpo = { pergunta };
+    if (userLocation) {
+        corpo.lat = userLocation.lat;
+        corpo.lng = userLocation.lng;
+    }
+    fetch('/pedidos', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(corpo) })
+        .then(async (r) => {
+            const data = await r.json();
+            if (!r.ok) throw new Error(data.erro || 'Erro ao criar pedido');
+            return data;
+        })
+        .then((pedido) => {
+            const lista = pedido.farmacias
+                .map((f) => `• ${escapeHtml(f.nome)} (${escapeHtml(f.cidade)}, ${f.distancia_km} km)`)
+                .join('<br>');
+            const el = displayMessage(
+                'Assistente',
+                `Enviei a sua pergunta a ${pedido.farmacias.length} farmácias perto de ${escapeHtml(pedido.origem.descricao)}:<br>${lista}<br>` +
+                    `<em>Pedido nº ${pedido.id}. Vou avisar aqui assim que responderem.</em>`
+            );
+            const estado = document.createElement('div');
+            estado.className = 'pedido-respostas';
+            el.appendChild(estado);
+            pedidosActivos[pedido.id] = { vistas: new Set(), estado };
+            acompanharPedido(pedido.id);
+        })
+        .catch((err) => displayMessage('Assistente', escapeHtml(err.message)));
+}
+
+function acompanharPedido(id) {
+    const ctx = pedidosActivos[id];
+    if (!ctx) return;
+    fetch(`/pedidos/${id}`)
+        .then((r) => r.json())
+        .then((pedido) => {
+            pedido.respostas.forEach((resp) => {
+                if (ctx.vistas.has(resp.farmacia_id)) return;
+                ctx.vistas.add(resp.farmacia_id);
+                const texto = resp.disponivel
+                    ? `<strong>${escapeHtml(resp.farmacia)}</strong> (${resp.distancia_km} km) respondeu: <strong>tem disponível</strong>` +
+                      (resp.preco != null ? ` por <strong>${formatarPreco(resp.preco)}</strong>` : '')
+                    : `<strong>${escapeHtml(resp.farmacia)}</strong> (${resp.distancia_km} km) respondeu: <strong>não tem</strong> de momento`;
+                const extra = [resp.mensagem && escapeHtml(resp.mensagem), resp.endereco && escapeHtml(resp.endereco), resp.telefone && escapeHtml(resp.telefone)]
+                    .filter(Boolean)
+                    .join(' · ');
+                displayMessage('Farmácia', `${texto}.${extra ? `<br>${extra}` : ''}`);
+            });
+            ctx.estado.textContent = `${pedido.respostas.length} de ${pedido.farmacias.length} farmácias responderam.`;
+            if (pedido.respostas.length < pedido.farmacias.length) setTimeout(() => acompanharPedido(id), 5000);
+            else delete pedidosActivos[id];
+        })
+        .catch(() => setTimeout(() => acompanharPedido(id), 10000));
 }
 
 function renderSuggestions(sugestoes) {
@@ -49,6 +125,7 @@ function sendMessage() {
         .then((data) => {
             displayMessage('Assistente', data.resposta);
             renderSuggestions(data.sugestoes || []);
+            if ((data.farmacias || []).some((f) => f.medicamento)) mostrarBotaoPedido(pergunta);
         })
         .catch(() => displayMessage('Assistente', 'Ocorreu um erro ao contactar o servidor. Tente novamente.'));
 }

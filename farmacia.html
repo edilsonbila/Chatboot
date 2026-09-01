@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Farmácia - Pedidos de clientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chatbot-container portal">
+        <div class="chat-header">
+            <h1>Portal da Farmácia</h1>
+            <small>Pedidos de clientes próximos enviados pelo assistente</small>
+        </div>
+        <div class="portal-selector">
+            <label for="farmacia-select">A sua farmácia:</label>
+            <select id="farmacia-select" class="chat-input"></select>
+        </div>
+        <div id="pedidos" class="chat-log"></div>
+    </div>
+    <script src="farmacia.js"></script>
+</body>
+</html>
