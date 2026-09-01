@@ -71,6 +71,35 @@ function farmaciasComMedicamento(medicamento, origem, limite = 3) {
     return resultados.slice(0, limite);
 }
 
+function farmaciasProximas(origem, limite = 5, excluirIds = new Set(), raioKm = Infinity) {
+    return dados.farmacias
+        .filter((f) => !excluirIds.has(f.id))
+        .map((f) => ({ farmacia: f, distancia_km: haversineKm(origem.lat, origem.lng, f.lat, f.lng) }))
+        .filter((r) => r.distancia_km <= raioKm)
+        .sort((a, b) => a.distancia_km - b.distancia_km)
+        .slice(0, limite);
+}
+
+function linhaFarmacia(f, distancia_km) {
+    const detalhes = [f.endereco, f.horario, f.telefone].filter(Boolean).join(' · ');
+    return `<strong>${f.nome}</strong> (${f.cidade}) — ${formatarDistancia(distancia_km)}<br>&nbsp;&nbsp;${detalhes}`;
+}
+
+function resumoFarmacia(f, distancia_km, extra = {}) {
+    return {
+        farmacia: f.nome,
+        cidade: f.cidade,
+        endereco: f.endereco,
+        telefone: f.telefone || null,
+        horario: f.horario || null,
+        fonte: f.fonte || 'manual',
+        distancia_km: distancia_km == null ? null : Number(distancia_km.toFixed(2)),
+        lat: f.lat,
+        lng: f.lng,
+        ...extra,
+    };
+}
+
 function respostaSaudacao() {
     const opcoes = [
         'Olá! Sou o assistente de farmácias de Moçambique. Diga-me que medicamento procura e onde está (ex.: "Onde tem Paracetamol em Nampula?").',
@@ -102,6 +131,16 @@ function responder({ pergunta = '', lat, lng }) {
         origemDescricao = 'perto da sua localização';
     }
 
+    if (medicamentos.length === 0 && origem && (contemTermo(textoNorm, 'farmacia') || contemTermo(textoNorm, 'farmacias') || contemTermo(textoNorm, 'perto'))) {
+        const proximas = farmaciasProximas(origem, 5);
+        const linhas = proximas.map((r, i) => `${i + 1}. ${linhaFarmacia(r.farmacia, r.distancia_km)}`);
+        return {
+            resposta: `Farmácias ${origemDescricao}:<br>${linhas.join('<br>')}<br><br>Diga-me o medicamento que procura para ver onde há stock e o preço.`,
+            sugestoes: dados.medicamentos.slice(0, 3).map((m) => `Onde tem ${m.nome}${localidade ? ' em ' + localidade.nome : ' perto de mim'}?`),
+            farmacias: proximas.map((r) => resumoFarmacia(r.farmacia, r.distancia_km)),
+        };
+    }
+
     if (medicamentos.length === 0) {
         if (SAUDACOES.some((s) => contemTermo(textoNorm, s)) && textoNorm.split(' ').length <= 4) {
             return { resposta: respostaSaudacao(), sugestoes: sugestoesPadrao(), farmacias: [] };
@@ -126,6 +165,7 @@ function responder({ pergunta = '', lat, lng }) {
 
     const blocos = [];
     const farmaciasResposta = [];
+    const idsComStock = new Set();
     for (const med of medicamentos) {
         const encontrados = farmaciasComMedicamento(med, origem);
         if (encontrados.length === 0) {
@@ -141,20 +181,21 @@ function responder({ pergunta = '', lat, lng }) {
                 `&nbsp;&nbsp;Preço: <strong>${formatarPreco(r.preco)}</strong> · ${r.farmacia.endereco} · ${r.farmacia.horario} · ${r.farmacia.telefone}`;
         });
         blocos.push(`${cabecalho}<br>${linhas.join('<br>')}`);
-        encontrados.forEach((r) =>
-            farmaciasResposta.push({
-                medicamento: med.nome,
-                farmacia: r.farmacia.nome,
-                cidade: r.farmacia.cidade,
-                endereco: r.farmacia.endereco,
-                telefone: r.farmacia.telefone,
-                horario: r.farmacia.horario,
-                preco: r.preco,
-                distancia_km: r.distancia_km == null ? null : Number(r.distancia_km.toFixed(2)),
-                lat: r.farmacia.lat,
-                lng: r.farmacia.lng,
-            })
-        );
+        encontrados.forEach((r) => {
+            idsComStock.add(r.farmacia.id);
+            farmaciasResposta.push(resumoFarmacia(r.farmacia, r.distancia_km, { medicamento: med.nome, preco: r.preco }));
+        });
+    }
+
+    if (origem) {
+        const outras = farmaciasProximas(origem, 3, idsComStock, 15);
+        if (outras.length) {
+            blocos.push(
+                `Outras farmácias ${origemDescricao} (stock e preço não confirmados — contacte antes de ir):<br>` +
+                    outras.map((r) => `• ${linhaFarmacia(r.farmacia, r.distancia_km)}`).join('<br>')
+            );
+            outras.forEach((r) => farmaciasResposta.push(resumoFarmacia(r.farmacia, r.distancia_km, { medicamento: null, preco: null })));
+        }
     }
 
     const sugestoes = [];
