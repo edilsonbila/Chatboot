@@ -1,71 +1,2943 @@
 {
   "medicamentos": [
-    { "id": 1, "nome": "Paracetamol", "sinonimos": ["panadol", "ben-u-ron", "acetaminofeno"], "descricao": "Analgésico e antipirético para dores e febre." },
-    { "id": 2, "nome": "Ibuprofeno", "sinonimos": ["brufen", "nurofen"], "descricao": "Anti-inflamatório não esteroide para dores e inflamações." },
-    { "id": 3, "nome": "Amoxicilina", "sinonimos": ["amoxil", "clamoxyl"], "descricao": "Antibiótico para infecções bacterianas (requer receita)." },
-    { "id": 4, "nome": "Coartem", "sinonimos": ["artemeter", "lumefantrina", "artemether"], "descricao": "Antimalárico (artemeter + lumefantrina) para malária não complicada." },
-    { "id": 5, "nome": "Metformina", "sinonimos": ["glucophage"], "descricao": "Antidiabético oral para diabetes tipo 2." },
-    { "id": 6, "nome": "Omeprazol", "sinonimos": ["losec"], "descricao": "Inibidor da bomba de protões para azia e úlceras." },
-    { "id": 7, "nome": "Loratadina", "sinonimos": ["claritine", "clarityne"], "descricao": "Anti-histamínico para alergias." },
-    { "id": 8, "nome": "Aspirina", "sinonimos": ["ácido acetilsalicílico", "acido acetilsalicilico", "aas"], "descricao": "Analgésico, antipirético e antiagregante plaquetário." },
-    { "id": 9, "nome": "Cotrimoxazol", "sinonimos": ["bactrim", "septrin"], "descricao": "Antibiótico (sulfametoxazol + trimetoprim)." },
-    { "id": 10, "nome": "Sais de Reidratação Oral", "sinonimos": ["sro", "soro oral", "sais de rehidratacao"], "descricao": "Reidratação em casos de diarreia e desidratação." },
-    { "id": 11, "nome": "Diclofenac", "sinonimos": ["voltaren", "diclofenaco"], "descricao": "Anti-inflamatório para dores musculares e articulares." },
-    { "id": 12, "nome": "Metronidazol", "sinonimos": ["flagyl"], "descricao": "Antibiótico/antiparasitário para infecções intestinais." }
+    {
+      "id": 1,
+      "nome": "Paracetamol",
+      "sinonimos": [
+        "panadol",
+        "ben-u-ron",
+        "acetaminofeno"
+      ],
+      "descricao": "Analgésico e antipirético para dores e febre."
+    },
+    {
+      "id": 2,
+      "nome": "Ibuprofeno",
+      "sinonimos": [
+        "brufen",
+        "nurofen"
+      ],
+      "descricao": "Anti-inflamatório não esteroide para dores e inflamações."
+    },
+    {
+      "id": 3,
+      "nome": "Amoxicilina",
+      "sinonimos": [
+        "amoxil",
+        "clamoxyl"
+      ],
+      "descricao": "Antibiótico para infecções bacterianas (requer receita)."
+    },
+    {
+      "id": 4,
+      "nome": "Coartem",
+      "sinonimos": [
+        "artemeter",
+        "lumefantrina",
+        "artemether"
+      ],
+      "descricao": "Antimalárico (artemeter + lumefantrina) para malária não complicada."
+    },
+    {
+      "id": 5,
+      "nome": "Metformina",
+      "sinonimos": [
+        "glucophage"
+      ],
+      "descricao": "Antidiabético oral para diabetes tipo 2."
+    },
+    {
+      "id": 6,
+      "nome": "Omeprazol",
+      "sinonimos": [
+        "losec"
+      ],
+      "descricao": "Inibidor da bomba de protões para azia e úlceras."
+    },
+    {
+      "id": 7,
+      "nome": "Loratadina",
+      "sinonimos": [
+        "claritine",
+        "clarityne"
+      ],
+      "descricao": "Anti-histamínico para alergias."
+    },
+    {
+      "id": 8,
+      "nome": "Aspirina",
+      "sinonimos": [
+        "ácido acetilsalicílico",
+        "acido acetilsalicilico",
+        "aas"
+      ],
+      "descricao": "Analgésico, antipirético e antiagregante plaquetário."
+    },
+    {
+      "id": 9,
+      "nome": "Cotrimoxazol",
+      "sinonimos": [
+        "bactrim",
+        "septrin"
+      ],
+      "descricao": "Antibiótico (sulfametoxazol + trimetoprim)."
+    },
+    {
+      "id": 10,
+      "nome": "Sais de Reidratação Oral",
+      "sinonimos": [
+        "sro",
+        "soro oral",
+        "sais de rehidratacao"
+      ],
+      "descricao": "Reidratação em casos de diarreia e desidratação."
+    },
+    {
+      "id": 11,
+      "nome": "Diclofenac",
+      "sinonimos": [
+        "voltaren",
+        "diclofenaco"
+      ],
+      "descricao": "Anti-inflamatório para dores musculares e articulares."
+    },
+    {
+      "id": 12,
+      "nome": "Metronidazol",
+      "sinonimos": [
+        "flagyl"
+      ],
+      "descricao": "Antibiótico/antiparasitário para infecções intestinais."
+    }
   ],
   "farmacias": [
-    { "id": 1, "nome": "Farmácia Calendula", "cidade": "Maputo", "provincia": "Maputo Cidade", "endereco": "Av. 24 de Julho, nº 1345", "telefone": "+258 21 400 111", "horario": "07:30-21:00", "lat": -25.9692, "lng": 32.5732,
-      "estoque": [ { "medicamento_id": 1, "preco": 45.0, "quantidade": 120 }, { "medicamento_id": 2, "preco": 85.0, "quantidade": 60 }, { "medicamento_id": 4, "preco": 350.0, "quantidade": 25 }, { "medicamento_id": 6, "preco": 190.0, "quantidade": 40 }, { "medicamento_id": 8, "preco": 60.0, "quantidade": 80 } ] },
-    { "id": 2, "nome": "Farmácia Moderna", "cidade": "Maputo", "provincia": "Maputo Cidade", "endereco": "Av. Eduardo Mondlane, nº 2210", "telefone": "+258 21 300 222", "horario": "24 horas", "lat": -25.9655, "lng": 32.5832,
-      "estoque": [ { "medicamento_id": 1, "preco": 40.0, "quantidade": 200 }, { "medicamento_id": 3, "preco": 320.0, "quantidade": 30 }, { "medicamento_id": 5, "preco": 210.0, "quantidade": 50 }, { "medicamento_id": 7, "preco": 150.0, "quantidade": 35 }, { "medicamento_id": 10, "preco": 25.0, "quantidade": 300 } ] },
-    { "id": 3, "nome": "Farmácia Sol", "cidade": "Maputo", "provincia": "Maputo Cidade", "endereco": "Av. Julius Nyerere, nº 780, Polana", "telefone": "+258 21 490 333", "horario": "08:00-20:00", "lat": -25.9560, "lng": 32.5960,
-      "estoque": [ { "medicamento_id": 1, "preco": 50.0, "quantidade": 90 }, { "medicamento_id": 2, "preco": 90.0, "quantidade": 40 }, { "medicamento_id": 4, "preco": 330.0, "quantidade": 15 }, { "medicamento_id": 11, "preco": 120.0, "quantidade": 45 }, { "medicamento_id": 12, "preco": 95.0, "quantidade": 60 } ] },
-    { "id": 4, "nome": "Farmácia Matola Rio", "cidade": "Matola", "provincia": "Maputo Província", "endereco": "Av. da Namaacha, Matola-Rio", "telefone": "+258 21 720 444", "horario": "08:00-19:00", "lat": -25.9622, "lng": 32.4589,
-      "estoque": [ { "medicamento_id": 1, "preco": 38.0, "quantidade": 150 }, { "medicamento_id": 4, "preco": 300.0, "quantidade": 40 }, { "medicamento_id": 9, "preco": 110.0, "quantidade": 55 }, { "medicamento_id": 10, "preco": 20.0, "quantidade": 250 } ] },
-    { "id": 5, "nome": "Farmácia Machava", "cidade": "Matola", "provincia": "Maputo Província", "endereco": "EN4, Machava-Sede", "telefone": "+258 21 750 555", "horario": "07:00-20:00", "lat": -25.9150, "lng": 32.5000,
-      "estoque": [ { "medicamento_id": 2, "preco": 80.0, "quantidade": 70 }, { "medicamento_id": 3, "preco": 290.0, "quantidade": 20 }, { "medicamento_id": 6, "preco": 180.0, "quantidade": 30 }, { "medicamento_id": 8, "preco": 55.0, "quantidade": 100 } ] },
-    { "id": 6, "nome": "Farmácia Xai-Xai Central", "cidade": "Xai-Xai", "provincia": "Gaza", "endereco": "Av. Samora Machel, Xai-Xai", "telefone": "+258 28 220 666", "horario": "08:00-19:00", "lat": -25.0519, "lng": 33.6442,
-      "estoque": [ { "medicamento_id": 1, "preco": 42.0, "quantidade": 80 }, { "medicamento_id": 4, "preco": 340.0, "quantidade": 30 }, { "medicamento_id": 10, "preco": 22.0, "quantidade": 200 }, { "medicamento_id": 12, "preco": 90.0, "quantidade": 40 } ] },
-    { "id": 7, "nome": "Farmácia Inhambane", "cidade": "Inhambane", "provincia": "Inhambane", "endereco": "Av. da Independência, Inhambane", "telefone": "+258 29 320 777", "horario": "08:00-18:00", "lat": -23.8650, "lng": 35.3833,
-      "estoque": [ { "medicamento_id": 1, "preco": 48.0, "quantidade": 60 }, { "medicamento_id": 2, "preco": 95.0, "quantidade": 30 }, { "medicamento_id": 4, "preco": 360.0, "quantidade": 20 }, { "medicamento_id": 7, "preco": 160.0, "quantidade": 25 } ] },
-    { "id": 8, "nome": "Farmácia Beira Mar", "cidade": "Beira", "provincia": "Sofala", "endereco": "Rua Major Serpa Pinto, Baixa da Beira", "telefone": "+258 23 320 888", "horario": "07:30-21:00", "lat": -19.8436, "lng": 34.8389,
-      "estoque": [ { "medicamento_id": 1, "preco": 44.0, "quantidade": 110 }, { "medicamento_id": 2, "preco": 88.0, "quantidade": 50 }, { "medicamento_id": 4, "preco": 320.0, "quantidade": 60 }, { "medicamento_id": 5, "preco": 220.0, "quantidade": 40 }, { "medicamento_id": 10, "preco": 24.0, "quantidade": 180 } ] },
-    { "id": 9, "nome": "Farmácia Macúti", "cidade": "Beira", "provincia": "Sofala", "endereco": "Av. das FPLM, Macúti", "telefone": "+258 23 310 999", "horario": "08:00-20:00", "lat": -19.8100, "lng": 34.8800,
-      "estoque": [ { "medicamento_id": 1, "preco": 46.0, "quantidade": 70 }, { "medicamento_id": 3, "preco": 310.0, "quantidade": 25 }, { "medicamento_id": 6, "preco": 195.0, "quantidade": 35 }, { "medicamento_id": 9, "preco": 105.0, "quantidade": 45 }, { "medicamento_id": 11, "preco": 125.0, "quantidade": 30 } ] },
-    { "id": 10, "nome": "Farmácia Chimoio", "cidade": "Chimoio", "provincia": "Manica", "endereco": "Rua do Bárue, Chimoio", "telefone": "+258 25 123 000", "horario": "08:00-19:00", "lat": -19.1164, "lng": 33.4833,
-      "estoque": [ { "medicamento_id": 1, "preco": 43.0, "quantidade": 90 }, { "medicamento_id": 4, "preco": 315.0, "quantidade": 50 }, { "medicamento_id": 8, "preco": 58.0, "quantidade": 60 }, { "medicamento_id": 12, "preco": 92.0, "quantidade": 40 } ] },
-    { "id": 11, "nome": "Farmácia Tete", "cidade": "Tete", "provincia": "Tete", "endereco": "Av. Eduardo Mondlane, Tete", "telefone": "+258 25 222 111", "horario": "07:30-19:30", "lat": -16.1564, "lng": 33.5867,
-      "estoque": [ { "medicamento_id": 1, "preco": 47.0, "quantidade": 100 }, { "medicamento_id": 2, "preco": 92.0, "quantidade": 40 }, { "medicamento_id": 4, "preco": 330.0, "quantidade": 45 }, { "medicamento_id": 10, "preco": 26.0, "quantidade": 150 } ] },
-    { "id": 12, "nome": "Farmácia Quelimane", "cidade": "Quelimane", "provincia": "Zambézia", "endereco": "Av. Josina Machel, Quelimane", "telefone": "+258 24 213 222", "horario": "08:00-19:00", "lat": -17.8786, "lng": 36.8883,
-      "estoque": [ { "medicamento_id": 1, "preco": 45.0, "quantidade": 85 }, { "medicamento_id": 3, "preco": 300.0, "quantidade": 20 }, { "medicamento_id": 4, "preco": 325.0, "quantidade": 55 }, { "medicamento_id": 9, "preco": 100.0, "quantidade": 50 } ] },
-    { "id": 13, "nome": "Farmácia Nampula Central", "cidade": "Nampula", "provincia": "Nampula", "endereco": "Av. Eduardo Mondlane, Nampula", "telefone": "+258 26 212 333", "horario": "07:30-20:00", "lat": -15.1165, "lng": 39.2666,
-      "estoque": [ { "medicamento_id": 1, "preco": 46.0, "quantidade": 130 }, { "medicamento_id": 2, "preco": 89.0, "quantidade": 55 }, { "medicamento_id": 4, "preco": 310.0, "quantidade": 70 }, { "medicamento_id": 6, "preco": 185.0, "quantidade": 30 }, { "medicamento_id": 10, "preco": 23.0, "quantidade": 220 } ] },
-    { "id": 14, "nome": "Farmácia Muhala", "cidade": "Nampula", "provincia": "Nampula", "endereco": "Bairro de Muhala Expansão, Nampula", "telefone": "+258 26 215 444", "horario": "08:00-19:00", "lat": -15.1350, "lng": 39.2900,
-      "estoque": [ { "medicamento_id": 1, "preco": 41.0, "quantidade": 75 }, { "medicamento_id": 5, "preco": 215.0, "quantidade": 25 }, { "medicamento_id": 7, "preco": 155.0, "quantidade": 20 }, { "medicamento_id": 11, "preco": 118.0, "quantidade": 35 } ] },
-    { "id": 15, "nome": "Farmácia Nacala", "cidade": "Nacala", "provincia": "Nampula", "endereco": "Av. Principal, Nacala-Porto", "telefone": "+258 26 526 555", "horario": "08:00-18:30", "lat": -14.5428, "lng": 40.6728,
-      "estoque": [ { "medicamento_id": 1, "preco": 49.0, "quantidade": 50 }, { "medicamento_id": 4, "preco": 345.0, "quantidade": 30 }, { "medicamento_id": 10, "preco": 27.0, "quantidade": 120 } ] },
-    { "id": 16, "nome": "Farmácia Pemba", "cidade": "Pemba", "provincia": "Cabo Delgado", "endereco": "Av. 25 de Setembro, Pemba", "telefone": "+258 27 220 666", "horario": "08:00-19:00", "lat": -12.9740, "lng": 40.5178,
-      "estoque": [ { "medicamento_id": 1, "preco": 50.0, "quantidade": 65 }, { "medicamento_id": 2, "preco": 96.0, "quantidade": 30 }, { "medicamento_id": 4, "preco": 340.0, "quantidade": 40 }, { "medicamento_id": 9, "preco": 112.0, "quantidade": 40 } ] },
-    { "id": 17, "nome": "Farmácia Lichinga", "cidade": "Lichinga", "provincia": "Niassa", "endereco": "Rua Filipe Samuel Magaia, Lichinga", "telefone": "+258 27 120 777", "horario": "08:00-18:00", "lat": -13.3128, "lng": 35.2406,
-      "estoque": [ { "medicamento_id": 1, "preco": 52.0, "quantidade": 45 }, { "medicamento_id": 4, "preco": 355.0, "quantidade": 25 }, { "medicamento_id": 8, "preco": 62.0, "quantidade": 40 }, { "medicamento_id": 10, "preco": 28.0, "quantidade": 100 } ] }
+    {
+      "id": 1,
+      "nome": "Farmácia Calendula",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Av. 24 de Julho, nº 1345",
+      "telefone": "+258 21 400 111",
+      "horario": "07:30-21:00",
+      "lat": -25.9692,
+      "lng": 32.5732,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 45,
+          "quantidade": 120
+        },
+        {
+          "medicamento_id": 2,
+          "preco": 85,
+          "quantidade": 60
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 350,
+          "quantidade": 25
+        },
+        {
+          "medicamento_id": 6,
+          "preco": 190,
+          "quantidade": 40
+        },
+        {
+          "medicamento_id": 8,
+          "preco": 60,
+          "quantidade": 80
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 2,
+      "nome": "Farmácia Moderna",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Av. Eduardo Mondlane, nº 2210",
+      "telefone": "+258 21 300 222",
+      "horario": "24 horas",
+      "lat": -25.9655,
+      "lng": 32.5832,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 40,
+          "quantidade": 200
+        },
+        {
+          "medicamento_id": 3,
+          "preco": 320,
+          "quantidade": 30
+        },
+        {
+          "medicamento_id": 5,
+          "preco": 210,
+          "quantidade": 50
+        },
+        {
+          "medicamento_id": 7,
+          "preco": 150,
+          "quantidade": 35
+        },
+        {
+          "medicamento_id": 10,
+          "preco": 25,
+          "quantidade": 300
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 3,
+      "nome": "Farmácia Sol",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Av. Julius Nyerere, nº 780, Polana",
+      "telefone": "+258 21 490 333",
+      "horario": "08:00-20:00",
+      "lat": -25.956,
+      "lng": 32.596,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 50,
+          "quantidade": 90
+        },
+        {
+          "medicamento_id": 2,
+          "preco": 90,
+          "quantidade": 40
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 330,
+          "quantidade": 15
+        },
+        {
+          "medicamento_id": 11,
+          "preco": 120,
+          "quantidade": 45
+        },
+        {
+          "medicamento_id": 12,
+          "preco": 95,
+          "quantidade": 60
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 4,
+      "nome": "Farmácia Matola Rio",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Av. da Namaacha, Matola-Rio",
+      "telefone": "+258 21 720 444",
+      "horario": "08:00-19:00",
+      "lat": -25.9622,
+      "lng": 32.4589,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 38,
+          "quantidade": 150
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 300,
+          "quantidade": 40
+        },
+        {
+          "medicamento_id": 9,
+          "preco": 110,
+          "quantidade": 55
+        },
+        {
+          "medicamento_id": 10,
+          "preco": 20,
+          "quantidade": 250
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 5,
+      "nome": "Farmácia Machava",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "EN4, Machava-Sede",
+      "telefone": "+258 21 750 555",
+      "horario": "07:00-20:00",
+      "lat": -25.915,
+      "lng": 32.5,
+      "estoque": [
+        {
+          "medicamento_id": 2,
+          "preco": 80,
+          "quantidade": 70
+        },
+        {
+          "medicamento_id": 3,
+          "preco": 290,
+          "quantidade": 20
+        },
+        {
+          "medicamento_id": 6,
+          "preco": 180,
+          "quantidade": 30
+        },
+        {
+          "medicamento_id": 8,
+          "preco": 55,
+          "quantidade": 100
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 6,
+      "nome": "Farmácia Xai-Xai Central",
+      "cidade": "Xai-Xai",
+      "provincia": "Gaza",
+      "endereco": "Av. Samora Machel, Xai-Xai",
+      "telefone": "+258 28 220 666",
+      "horario": "08:00-19:00",
+      "lat": -25.0519,
+      "lng": 33.6442,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 42,
+          "quantidade": 80
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 340,
+          "quantidade": 30
+        },
+        {
+          "medicamento_id": 10,
+          "preco": 22,
+          "quantidade": 200
+        },
+        {
+          "medicamento_id": 12,
+          "preco": 90,
+          "quantidade": 40
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 7,
+      "nome": "Farmácia Inhambane",
+      "cidade": "Inhambane",
+      "provincia": "Inhambane",
+      "endereco": "Av. da Independência, Inhambane",
+      "telefone": "+258 29 320 777",
+      "horario": "08:00-18:00",
+      "lat": -23.865,
+      "lng": 35.3833,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 48,
+          "quantidade": 60
+        },
+        {
+          "medicamento_id": 2,
+          "preco": 95,
+          "quantidade": 30
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 360,
+          "quantidade": 20
+        },
+        {
+          "medicamento_id": 7,
+          "preco": 160,
+          "quantidade": 25
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 8,
+      "nome": "Farmácia Beira Mar",
+      "cidade": "Beira",
+      "provincia": "Sofala",
+      "endereco": "Rua Major Serpa Pinto, Baixa da Beira",
+      "telefone": "+258 23 320 888",
+      "horario": "07:30-21:00",
+      "lat": -19.8436,
+      "lng": 34.8389,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 44,
+          "quantidade": 110
+        },
+        {
+          "medicamento_id": 2,
+          "preco": 88,
+          "quantidade": 50
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 320,
+          "quantidade": 60
+        },
+        {
+          "medicamento_id": 5,
+          "preco": 220,
+          "quantidade": 40
+        },
+        {
+          "medicamento_id": 10,
+          "preco": 24,
+          "quantidade": 180
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 9,
+      "nome": "Farmácia Macúti",
+      "cidade": "Beira",
+      "provincia": "Sofala",
+      "endereco": "Av. das FPLM, Macúti",
+      "telefone": "+258 23 310 999",
+      "horario": "08:00-20:00",
+      "lat": -19.81,
+      "lng": 34.88,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 46,
+          "quantidade": 70
+        },
+        {
+          "medicamento_id": 3,
+          "preco": 310,
+          "quantidade": 25
+        },
+        {
+          "medicamento_id": 6,
+          "preco": 195,
+          "quantidade": 35
+        },
+        {
+          "medicamento_id": 9,
+          "preco": 105,
+          "quantidade": 45
+        },
+        {
+          "medicamento_id": 11,
+          "preco": 125,
+          "quantidade": 30
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 10,
+      "nome": "Farmácia Chimoio",
+      "cidade": "Chimoio",
+      "provincia": "Manica",
+      "endereco": "Rua do Bárue, Chimoio",
+      "telefone": "+258 25 123 000",
+      "horario": "08:00-19:00",
+      "lat": -19.1164,
+      "lng": 33.4833,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 43,
+          "quantidade": 90
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 315,
+          "quantidade": 50
+        },
+        {
+          "medicamento_id": 8,
+          "preco": 58,
+          "quantidade": 60
+        },
+        {
+          "medicamento_id": 12,
+          "preco": 92,
+          "quantidade": 40
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 11,
+      "nome": "Farmácia Tete",
+      "cidade": "Tete",
+      "provincia": "Tete",
+      "endereco": "Av. Eduardo Mondlane, Tete",
+      "telefone": "+258 25 222 111",
+      "horario": "07:30-19:30",
+      "lat": -16.1564,
+      "lng": 33.5867,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 47,
+          "quantidade": 100
+        },
+        {
+          "medicamento_id": 2,
+          "preco": 92,
+          "quantidade": 40
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 330,
+          "quantidade": 45
+        },
+        {
+          "medicamento_id": 10,
+          "preco": 26,
+          "quantidade": 150
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 12,
+      "nome": "Farmácia Quelimane",
+      "cidade": "Quelimane",
+      "provincia": "Zambézia",
+      "endereco": "Av. Josina Machel, Quelimane",
+      "telefone": "+258 24 213 222",
+      "horario": "08:00-19:00",
+      "lat": -17.8786,
+      "lng": 36.8883,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 45,
+          "quantidade": 85
+        },
+        {
+          "medicamento_id": 3,
+          "preco": 300,
+          "quantidade": 20
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 325,
+          "quantidade": 55
+        },
+        {
+          "medicamento_id": 9,
+          "preco": 100,
+          "quantidade": 50
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 13,
+      "nome": "Farmácia Nampula Central",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Av. Eduardo Mondlane, Nampula",
+      "telefone": "+258 26 212 333",
+      "horario": "07:30-20:00",
+      "lat": -15.1165,
+      "lng": 39.2666,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 46,
+          "quantidade": 130
+        },
+        {
+          "medicamento_id": 2,
+          "preco": 89,
+          "quantidade": 55
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 310,
+          "quantidade": 70
+        },
+        {
+          "medicamento_id": 6,
+          "preco": 185,
+          "quantidade": 30
+        },
+        {
+          "medicamento_id": 10,
+          "preco": 23,
+          "quantidade": 220
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 14,
+      "nome": "Farmácia Muhala",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Bairro de Muhala Expansão, Nampula",
+      "telefone": "+258 26 215 444",
+      "horario": "08:00-19:00",
+      "lat": -15.135,
+      "lng": 39.29,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 41,
+          "quantidade": 75
+        },
+        {
+          "medicamento_id": 5,
+          "preco": 215,
+          "quantidade": 25
+        },
+        {
+          "medicamento_id": 7,
+          "preco": 155,
+          "quantidade": 20
+        },
+        {
+          "medicamento_id": 11,
+          "preco": 118,
+          "quantidade": 35
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 15,
+      "nome": "Farmácia Nacala",
+      "cidade": "Nacala",
+      "provincia": "Nampula",
+      "endereco": "Av. Principal, Nacala-Porto",
+      "telefone": "+258 26 526 555",
+      "horario": "08:00-18:30",
+      "lat": -14.5428,
+      "lng": 40.6728,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 49,
+          "quantidade": 50
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 345,
+          "quantidade": 30
+        },
+        {
+          "medicamento_id": 10,
+          "preco": 27,
+          "quantidade": 120
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 16,
+      "nome": "Farmácia Pemba",
+      "cidade": "Pemba",
+      "provincia": "Cabo Delgado",
+      "endereco": "Av. 25 de Setembro, Pemba",
+      "telefone": "+258 27 220 666",
+      "horario": "08:00-19:00",
+      "lat": -12.974,
+      "lng": 40.5178,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 50,
+          "quantidade": 65
+        },
+        {
+          "medicamento_id": 2,
+          "preco": 96,
+          "quantidade": 30
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 340,
+          "quantidade": 40
+        },
+        {
+          "medicamento_id": 9,
+          "preco": 112,
+          "quantidade": 40
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "id": 17,
+      "nome": "Farmácia Lichinga",
+      "cidade": "Lichinga",
+      "provincia": "Niassa",
+      "endereco": "Rua Filipe Samuel Magaia, Lichinga",
+      "telefone": "+258 27 120 777",
+      "horario": "08:00-18:00",
+      "lat": -13.3128,
+      "lng": 35.2406,
+      "estoque": [
+        {
+          "medicamento_id": 1,
+          "preco": 52,
+          "quantidade": 45
+        },
+        {
+          "medicamento_id": 4,
+          "preco": 355,
+          "quantidade": 25
+        },
+        {
+          "medicamento_id": 8,
+          "preco": 62,
+          "quantidade": 40
+        },
+        {
+          "medicamento_id": 10,
+          "preco": 28,
+          "quantidade": 100
+        }
+      ],
+      "fonte": "manual"
+    },
+    {
+      "nome": "Farmácia (Angoche)",
+      "cidade": "Angoche",
+      "provincia": "Nampula",
+      "endereco": "Angoche",
+      "telefone": null,
+      "horario": null,
+      "lat": -16.234121,
+      "lng": 39.907342,
+      "fonte": "osm",
+      "osm_id": "node/4579257842",
+      "estoque": [],
+      "id": 18
+    },
+    {
+      "nome": "Farmacity",
+      "cidade": "Beira",
+      "provincia": "Sofala",
+      "endereco": "Beira",
+      "telefone": null,
+      "horario": null,
+      "lat": -19.783739,
+      "lng": 34.879082,
+      "fonte": "osm",
+      "osm_id": "way/421065531",
+      "estoque": [],
+      "id": 19
+    },
+    {
+      "nome": "Farmacity",
+      "cidade": "Beira",
+      "provincia": "Sofala",
+      "endereco": "Beira",
+      "telefone": null,
+      "horario": null,
+      "lat": -19.789486,
+      "lng": 34.885276,
+      "fonte": "osm",
+      "osm_id": "way/421237588",
+      "estoque": [],
+      "id": 20
+    },
+    {
+      "nome": "Tagi",
+      "cidade": "Boane",
+      "provincia": "Maputo Província",
+      "endereco": "Boane",
+      "telefone": null,
+      "horario": null,
+      "lat": -26.020277,
+      "lng": 32.400535,
+      "fonte": "osm",
+      "osm_id": "node/5005273421",
+      "estoque": [],
+      "id": 21
+    },
+    {
+      "nome": "Farmácia (Caia)",
+      "cidade": "Caia",
+      "provincia": "Sofala",
+      "endereco": "Caia",
+      "telefone": null,
+      "horario": null,
+      "lat": -17.832486,
+      "lng": 35.344375,
+      "fonte": "osm",
+      "osm_id": "node/8363237420",
+      "estoque": [],
+      "id": 22
+    },
+    {
+      "nome": "Farmacia De caia",
+      "cidade": "Caia",
+      "provincia": "Sofala",
+      "endereco": "Caia",
+      "telefone": null,
+      "horario": "Mo-Sa 08:00-12:00,14:00-17:00; Sa 08:00-12:30; PH closed",
+      "lat": -17.834005,
+      "lng": 35.343871,
+      "fonte": "osm",
+      "osm_id": "node/9808930247",
+      "estoque": [],
+      "id": 23
+    },
+    {
+      "nome": "Farmácia (Chimoio)",
+      "cidade": "Chimoio",
+      "provincia": "Manica",
+      "endereco": "Chimoio",
+      "telefone": null,
+      "horario": null,
+      "lat": -19.112877,
+      "lng": 33.479631,
+      "fonte": "osm",
+      "osm_id": "node/14100510437",
+      "estoque": [],
+      "id": 24
+    },
+    {
+      "nome": "Farmácia Sara",
+      "cidade": "Chimoio",
+      "provincia": "Manica",
+      "endereco": "Chimoio",
+      "telefone": null,
+      "horario": null,
+      "lat": -19.094782,
+      "lng": 33.478939,
+      "fonte": "osm",
+      "osm_id": "node/11134680905",
+      "estoque": [],
+      "id": 25
+    },
+    {
+      "nome": "Farmácia Taslimah",
+      "cidade": "Chimoio",
+      "provincia": "Manica",
+      "endereco": "Chimoio",
+      "telefone": null,
+      "horario": null,
+      "lat": -19.124044,
+      "lng": 33.480705,
+      "fonte": "osm",
+      "osm_id": "node/4820020589",
+      "estoque": [],
+      "id": 26
+    },
+    {
+      "nome": "Centro de saúde sexto bairro",
+      "cidade": "Chókwè",
+      "provincia": "Gaza",
+      "endereco": "Sexto Bairro",
+      "telefone": null,
+      "horario": "mo-fr 07:00-15:00",
+      "lat": -24.568777,
+      "lng": 33.011212,
+      "fonte": "osm",
+      "osm_id": "node/13633492682",
+      "estoque": [],
+      "id": 27
+    },
+    {
+      "nome": "Farmácia (Chókwè)",
+      "cidade": "Chókwè",
+      "provincia": "Gaza",
+      "endereco": "Chókwè",
+      "telefone": null,
+      "horario": null,
+      "lat": -24.530801,
+      "lng": 33.00033,
+      "fonte": "osm",
+      "osm_id": "node/2122025670",
+      "estoque": [],
+      "id": 28
+    },
+    {
+      "nome": "Farmácia (Chókwè)",
+      "cidade": "Chókwè",
+      "provincia": "Gaza",
+      "endereco": "Segundo Bairro",
+      "telefone": null,
+      "horario": "mo-sa 07:00-21:00",
+      "lat": -24.5174,
+      "lng": 32.980352,
+      "fonte": "osm",
+      "osm_id": "node/13633492684",
+      "estoque": [],
+      "id": 29
+    },
+    {
+      "nome": "Farmácia (Chókwè)",
+      "cidade": "Chókwè",
+      "provincia": "Gaza",
+      "endereco": "Segundo Bairro",
+      "telefone": null,
+      "horario": "mo-su 00:00-24:00",
+      "lat": -24.527577,
+      "lng": 32.998043,
+      "fonte": "osm",
+      "osm_id": "node/13633492685",
+      "estoque": [],
+      "id": 30
+    },
+    {
+      "nome": "Farmácia (Chókwè)",
+      "cidade": "Chókwè",
+      "provincia": "Gaza",
+      "endereco": "Quinto Bairro de Nwachicoluane",
+      "telefone": null,
+      "horario": "mo-fr 06:00-17:00",
+      "lat": -24.682288,
+      "lng": 33.020013,
+      "fonte": "osm",
+      "osm_id": "node/13634521813",
+      "estoque": [],
+      "id": 31
+    },
+    {
+      "nome": "farmacia muhanhisse",
+      "cidade": "Chókwè",
+      "provincia": "Gaza",
+      "endereco": "Terceiro Bairro",
+      "telefone": null,
+      "horario": "mo-su 07:00-20:00",
+      "lat": -24.528205,
+      "lng": 32.984503,
+      "fonte": "osm",
+      "osm_id": "node/13634521811",
+      "estoque": [],
+      "id": 32
+    },
+    {
+      "nome": "farmácia pfuneka",
+      "cidade": "Chókwè",
+      "provincia": "Gaza",
+      "endereco": "Primeiro Bairro A",
+      "telefone": null,
+      "horario": "mo-sa 07:00-19:00",
+      "lat": -24.526937,
+      "lng": 33.00237,
+      "fonte": "osm",
+      "osm_id": "node/13633866805",
+      "estoque": [],
+      "id": 33
+    },
+    {
+      "nome": "Farmácia (Estaquinha-Sede)",
+      "cidade": "Estaquinha-Sede",
+      "provincia": "sofala",
+      "endereco": "Estaquinha-Sede",
+      "telefone": null,
+      "horario": "Mo-Su 00:00-24:00",
+      "lat": -19.979437,
+      "lng": 34.146949,
+      "fonte": "osm",
+      "osm_id": "node/13639456532",
+      "estoque": [],
+      "id": 34
+    },
+    {
+      "nome": "Ayana",
+      "cidade": "Ilha de Moçambique",
+      "provincia": "Nampula",
+      "endereco": "Ilha de Moçambique",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.043418,
+      "lng": 40.695077,
+      "fonte": "osm",
+      "osm_id": "node/4457524689",
+      "estoque": [],
+      "id": 35
+    },
+    {
+      "nome": "Farmácia (Ilha de Moçambique)",
+      "cidade": "Ilha de Moçambique",
+      "provincia": "Nampula",
+      "endereco": "Ilha de Moçambique",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.032549,
+      "lng": 40.735899,
+      "fonte": "osm",
+      "osm_id": "node/3452259327",
+      "estoque": [],
+      "id": 36
+    },
+    {
+      "nome": "Farmacia Ilha de Mocambique",
+      "cidade": "Ilha de Moçambique",
+      "provincia": "Nampula",
+      "endereco": "Ilha de Moçambique",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.034222,
+      "lng": 40.735165,
+      "fonte": "osm",
+      "osm_id": "node/6482074094",
+      "estoque": [],
+      "id": 37
+    },
+    {
+      "nome": "Farmácia (Inhambane)",
+      "cidade": "Inhambane",
+      "provincia": "Inhambane",
+      "endereco": "Inhambane",
+      "telefone": null,
+      "horario": null,
+      "lat": -23.854945,
+      "lng": 35.546202,
+      "fonte": "osm",
+      "osm_id": "node/2506845601",
+      "estoque": [],
+      "id": 38
+    },
+    {
+      "nome": "Farmácia (Inhambane)",
+      "cidade": "Inhambane",
+      "provincia": "Inhambane",
+      "endereco": "Avenida Acordos de Lusaka",
+      "telefone": null,
+      "horario": "Mo-Su 08:00-21:00",
+      "lat": -23.867671,
+      "lng": 35.381778,
+      "fonte": "osm",
+      "osm_id": "node/13962030460",
+      "estoque": [],
+      "id": 39
+    },
+    {
+      "nome": "Farmacia Muguanaza",
+      "cidade": "Inharrime",
+      "provincia": "Inhambane",
+      "endereco": "Estrada Nacional nº1",
+      "telefone": null,
+      "horario": "Mo-Fr 09:00-17:00",
+      "lat": -24.474532,
+      "lng": 35.028132,
+      "fonte": "osm",
+      "osm_id": "way/988332786",
+      "estoque": [],
+      "id": 40
+    },
+    {
+      "nome": "Farmácia (Manhiça)",
+      "cidade": "Manhiça",
+      "provincia": "Maputo Província",
+      "endereco": "Manhiça",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.405576,
+      "lng": 32.804701,
+      "fonte": "osm",
+      "osm_id": "node/3713320187",
+      "estoque": [],
+      "id": 41
+    },
+    {
+      "nome": "Medi-Health Farmácia",
+      "cidade": "Manhiça",
+      "provincia": "Maputo Província",
+      "endereco": "Manhiça",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.404366,
+      "lng": 32.806139,
+      "fonte": "osm",
+      "osm_id": "node/3713303125",
+      "estoque": [],
+      "id": 42
+    },
+    {
+      "nome": "Farmácia (Mapai sede)",
+      "cidade": "Mapai sede",
+      "provincia": "Gaza",
+      "endereco": "Mapai sede",
+      "telefone": null,
+      "horario": "24/7",
+      "lat": -22.731509,
+      "lng": 32.058467,
+      "fonte": "osm",
+      "osm_id": "node/13633570577",
+      "estoque": [],
+      "id": 43
+    },
+    {
+      "nome": "Backer II",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Rua 5343",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.905612,
+      "lng": 32.567293,
+      "fonte": "osm",
+      "osm_id": "way/667130401",
+      "estoque": [],
+      "id": 44
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Av. Mao Tsé Tung, 637",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.964985,
+      "lng": 32.591705,
+      "fonte": "osm",
+      "osm_id": "node/2475507683",
+      "estoque": [],
+      "id": 45
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Patrice Lubumba, 1156",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.971214,
+      "lng": 32.576658,
+      "fonte": "osm",
+      "osm_id": "node/2477935546",
+      "estoque": [],
+      "id": 46
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": "24/7",
+      "lat": -25.969268,
+      "lng": 32.580016,
+      "fonte": "osm",
+      "osm_id": "node/2597327227",
+      "estoque": [],
+      "id": 47
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.971914,
+      "lng": 32.571801,
+      "fonte": "osm",
+      "osm_id": "node/2607931701",
+      "estoque": [],
+      "id": 48
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Karl Marx",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.97085,
+      "lng": 32.570248,
+      "fonte": "osm",
+      "osm_id": "node/4449333197",
+      "estoque": [],
+      "id": 49
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Karl Marx, ７６３",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.967954,
+      "lng": 32.572129,
+      "fonte": "osm",
+      "osm_id": "node/4449333296",
+      "estoque": [],
+      "id": 50
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Karl Marx",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.97251,
+      "lng": 32.568984,
+      "fonte": "osm",
+      "osm_id": "node/4449388691",
+      "estoque": [],
+      "id": 51
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.964645,
+      "lng": 32.569982,
+      "fonte": "osm",
+      "osm_id": "node/4450305393",
+      "estoque": [],
+      "id": 52
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.888327,
+      "lng": 32.565012,
+      "fonte": "osm",
+      "osm_id": "node/4543278628",
+      "estoque": [],
+      "id": 53
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": "24/7",
+      "lat": -25.973754,
+      "lng": 32.587845,
+      "fonte": "osm",
+      "osm_id": "node/4678515972",
+      "estoque": [],
+      "id": 54
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.914673,
+      "lng": 32.613363,
+      "fonte": "osm",
+      "osm_id": "node/5163573323",
+      "estoque": [],
+      "id": 55
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.916279,
+      "lng": 32.610061,
+      "fonte": "osm",
+      "osm_id": "node/5163619522",
+      "estoque": [],
+      "id": 56
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.854191,
+      "lng": 32.567741,
+      "fonte": "osm",
+      "osm_id": "node/5462047275",
+      "estoque": [],
+      "id": 57
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Julius Nyerere",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.972142,
+      "lng": 32.59467,
+      "fonte": "osm",
+      "osm_id": "node/5480976022",
+      "estoque": [],
+      "id": 58
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.934141,
+      "lng": 32.549787,
+      "fonte": "osm",
+      "osm_id": "node/5756557061",
+      "estoque": [],
+      "id": 59
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida da Marginal",
+      "telefone": null,
+      "horario": "24/7",
+      "lat": -25.929634,
+      "lng": 32.633368,
+      "fonte": "osm",
+      "osm_id": "node/5843819512",
+      "estoque": [],
+      "id": 60
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.961966,
+      "lng": 32.577132,
+      "fonte": "osm",
+      "osm_id": "node/6371923085",
+      "estoque": [],
+      "id": 61
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.937144,
+      "lng": 32.552465,
+      "fonte": "osm",
+      "osm_id": "node/8599562258",
+      "estoque": [],
+      "id": 62
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.977766,
+      "lng": 32.585836,
+      "fonte": "osm",
+      "osm_id": "node/9824932917",
+      "estoque": [],
+      "id": 63
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.896872,
+      "lng": 32.563377,
+      "fonte": "osm",
+      "osm_id": "way/458295542",
+      "estoque": [],
+      "id": 64
+    },
+    {
+      "nome": "Farmácia (Maputo)",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.90651,
+      "lng": 32.526464,
+      "fonte": "osm",
+      "osm_id": "way/497867321",
+      "estoque": [],
+      "id": 65
+    },
+    {
+      "nome": "Farmácia África da Paz",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.85666,
+      "lng": 32.628442,
+      "fonte": "osm",
+      "osm_id": "node/6934943091",
+      "estoque": [],
+      "id": 66
+    },
+    {
+      "nome": "Farmácia Amina",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.901908,
+      "lng": 32.617101,
+      "fonte": "osm",
+      "osm_id": "node/7014906477",
+      "estoque": [],
+      "id": 67
+    },
+    {
+      "nome": "Farmácia Aphoteka",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Julius Nyerere, 11",
+      "telefone": "21495633 848263844 829037281",
+      "horario": null,
+      "lat": -25.977067,
+      "lng": 32.592809,
+      "fonte": "osm",
+      "osm_id": "node/4141270290",
+      "estoque": [],
+      "id": 68
+    },
+    {
+      "nome": "Farmácia Calêndula I",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Av. Mao Tsé Tung, 222/226",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.966656,
+      "lng": 32.595585,
+      "fonte": "osm",
+      "osm_id": "node/2475717711",
+      "estoque": [],
+      "id": 69
+    },
+    {
+      "nome": "Farmácia Chamissava",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -26.030564,
+      "lng": 32.543557,
+      "fonte": "osm",
+      "osm_id": "node/7662126682",
+      "estoque": [],
+      "id": 70
+    },
+    {
+      "nome": "Farmacia Compone",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Vladimir Lenine, 4649",
+      "telefone": "+258829217970",
+      "horario": "Mo-Su 08:00-20:45",
+      "lat": -25.937508,
+      "lng": 32.599862,
+      "fonte": "osm",
+      "osm_id": "node/4815654422",
+      "estoque": [],
+      "id": 71
+    },
+    {
+      "nome": "Farmácia Coop",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.955517,
+      "lng": 32.587034,
+      "fonte": "osm",
+      "osm_id": "node/2596106859",
+      "estoque": [],
+      "id": 72
+    },
+    {
+      "nome": "Farmácia de Mapulene",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Av. da Marginal",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.891038,
+      "lng": 32.657234,
+      "fonte": "osm",
+      "osm_id": "node/10125640026",
+      "estoque": [],
+      "id": 73
+    },
+    {
+      "nome": "Farmacia do Hulene",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.912615,
+      "lng": 32.59014,
+      "fonte": "osm",
+      "osm_id": "node/4684991701",
+      "estoque": [],
+      "id": 74
+    },
+    {
+      "nome": "Farmacia Do Xiquelene",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.92537,
+      "lng": 32.608325,
+      "fonte": "osm",
+      "osm_id": "node/5835795919",
+      "estoque": [],
+      "id": 75
+    },
+    {
+      "nome": "Farmácia Incassane",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.995189,
+      "lng": 32.5314,
+      "fonte": "osm",
+      "osm_id": "node/7640491443",
+      "estoque": [],
+      "id": 76
+    },
+    {
+      "nome": "Farmacia INFULENE",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.914085,
+      "lng": 32.533442,
+      "fonte": "osm",
+      "osm_id": "node/4881654258",
+      "estoque": [],
+      "id": 77
+    },
+    {
+      "nome": "Farmácia Isaura",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.956087,
+      "lng": 32.570954,
+      "fonte": "osm",
+      "osm_id": "node/5145273385",
+      "estoque": [],
+      "id": 78
+    },
+    {
+      "nome": "Farmácia Kuhanha",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.981291,
+      "lng": 32.559247,
+      "fonte": "osm",
+      "osm_id": "node/7630662766",
+      "estoque": [],
+      "id": 79
+    },
+    {
+      "nome": "Farmácia Luis Valente",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Karl Marx",
+      "telefone": null,
+      "horario": "24/7",
+      "lat": -25.963237,
+      "lng": 32.576148,
+      "fonte": "osm",
+      "osm_id": "node/4141143791",
+      "estoque": [],
+      "id": 80
+    },
+    {
+      "nome": "Farmácia Maahirah",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.935317,
+      "lng": 32.556551,
+      "fonte": "osm",
+      "osm_id": "node/5733790213",
+      "estoque": [],
+      "id": 81
+    },
+    {
+      "nome": "Farmácia Maputo",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.956487,
+      "lng": 32.557422,
+      "fonte": "osm",
+      "osm_id": "node/8270578813",
+      "estoque": [],
+      "id": 82
+    },
+    {
+      "nome": "Farmácia Orquídea",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.907235,
+      "lng": 32.615981,
+      "fonte": "osm",
+      "osm_id": "node/7014817444",
+      "estoque": [],
+      "id": 83
+    },
+    {
+      "nome": "Farmácia Pinto",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.931262,
+      "lng": 32.571673,
+      "fonte": "osm",
+      "osm_id": "node/4957171922",
+      "estoque": [],
+      "id": 84
+    },
+    {
+      "nome": "Farmácia Regente",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Avenida Eduardo Mondlane",
+      "telefone": null,
+      "horario": "Mo-Fr 08:00-18:30; Sa 08:00-14:30",
+      "lat": -25.959891,
+      "lng": 32.568908,
+      "fonte": "osm",
+      "osm_id": "node/5469873821",
+      "estoque": [],
+      "id": 85
+    },
+    {
+      "nome": "Farmácia Romos",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.989183,
+      "lng": 32.558257,
+      "fonte": "osm",
+      "osm_id": "node/7630838686",
+      "estoque": [],
+      "id": 86
+    },
+    {
+      "nome": "Farmacia Shenacris",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.91267,
+      "lng": 32.525117,
+      "fonte": "osm",
+      "osm_id": "way/499477706",
+      "estoque": [],
+      "id": 87
+    },
+    {
+      "nome": "Farmácia Winel",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -26.002968,
+      "lng": 32.545099,
+      "fonte": "osm",
+      "osm_id": "node/7640418369",
+      "estoque": [],
+      "id": 88
+    },
+    {
+      "nome": "Luz",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.8965,
+      "lng": 32.563466,
+      "fonte": "osm",
+      "osm_id": "node/5462047064",
+      "estoque": [],
+      "id": 89
+    },
+    {
+      "nome": "Malate",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.915905,
+      "lng": 32.589718,
+      "fonte": "osm",
+      "osm_id": "node/4683548112",
+      "estoque": [],
+      "id": 90
+    },
+    {
+      "nome": "Medis Farmacêutica, Lda",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.956924,
+      "lng": 32.557666,
+      "fonte": "osm",
+      "osm_id": "way/889620383",
+      "estoque": [],
+      "id": 91
+    },
+    {
+      "nome": "Samuel",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Maputo",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.941413,
+      "lng": 32.548581,
+      "fonte": "osm",
+      "osm_id": "node/8575521642",
+      "estoque": [],
+      "id": 92
+    },
+    {
+      "nome": "Wellpharma",
+      "cidade": "Maputo",
+      "provincia": "Maputo Cidade",
+      "endereco": "Av. Agostinho Neto",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.964638,
+      "lng": 32.585918,
+      "fonte": "osm",
+      "osm_id": "node/9887608525",
+      "estoque": [],
+      "id": 93
+    },
+    {
+      "nome": "Farmácia (Marracuene)",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.837925,
+      "lng": 32.637147,
+      "fonte": "osm",
+      "osm_id": "node/7015013316",
+      "estoque": [],
+      "id": 94
+    },
+    {
+      "nome": "Farmácia (Marracuene)",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.845056,
+      "lng": 32.633525,
+      "fonte": "osm",
+      "osm_id": "node/7017631413",
+      "estoque": [],
+      "id": 95
+    },
+    {
+      "nome": "Farmácia (Marracuene)",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.853734,
+      "lng": 32.670569,
+      "fonte": "osm",
+      "osm_id": "node/8201434142",
+      "estoque": [],
+      "id": 96
+    },
+    {
+      "nome": "Farmácia (Marracuene)",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.826381,
+      "lng": 32.631669,
+      "fonte": "osm",
+      "osm_id": "node/13303158803",
+      "estoque": [],
+      "id": 97
+    },
+    {
+      "nome": "Farmácia (Marracuene)",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.833309,
+      "lng": 32.625048,
+      "fonte": "osm",
+      "osm_id": "node/13303169966",
+      "estoque": [],
+      "id": 98
+    },
+    {
+      "nome": "Farmácia (Marracuene)",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.836947,
+      "lng": 32.624995,
+      "fonte": "osm",
+      "osm_id": "node/14085827661",
+      "estoque": [],
+      "id": 99
+    },
+    {
+      "nome": "Farmácia (Marracuene)",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.845606,
+      "lng": 32.623896,
+      "fonte": "osm",
+      "osm_id": "node/14085827678",
+      "estoque": [],
+      "id": 100
+    },
+    {
+      "nome": "Farmácia (Marracuene)",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.847116,
+      "lng": 32.6237,
+      "fonte": "osm",
+      "osm_id": "node/14085827679",
+      "estoque": [],
+      "id": 101
+    },
+    {
+      "nome": "Farmácia Deus e Resposta 2",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Bairro de Zimpeto, Q.70, casa n 112",
+      "telefone": "+ 258 845216521/875156600",
+      "horario": null,
+      "lat": -25.830527,
+      "lng": 32.575684,
+      "fonte": "osm",
+      "osm_id": "node/12484083293",
+      "estoque": [],
+      "id": 102
+    },
+    {
+      "nome": "Farmacia Fumane",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Estrada Circular",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.832052,
+      "lng": 32.619213,
+      "fonte": "osm",
+      "osm_id": "node/12508862058",
+      "estoque": [],
+      "id": 103
+    },
+    {
+      "nome": "Farmacia Magoanine",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Distrito Municipal de KaMavota",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.842993,
+      "lng": 32.623529,
+      "fonte": "osm",
+      "osm_id": "node/12484177241",
+      "estoque": [],
+      "id": 104
+    },
+    {
+      "nome": "Farmacia Maira",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Marracuene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.819422,
+      "lng": 32.633927,
+      "fonte": "osm",
+      "osm_id": "node/13303152224",
+      "estoque": [],
+      "id": 105
+    },
+    {
+      "nome": "Farmacia Santos",
+      "cidade": "Marracuene",
+      "provincia": "Maputo Província",
+      "endereco": "Michafutene",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.784051,
+      "lng": 32.586388,
+      "fonte": "osm",
+      "osm_id": "node/13303139657",
+      "estoque": [],
+      "id": 106
+    },
+    {
+      "nome": "Farmacia Bila",
+      "cidade": "Massinga",
+      "provincia": "Inhambane",
+      "endereco": "Massinga",
+      "telefone": null,
+      "horario": null,
+      "lat": -23.331776,
+      "lng": 35.386293,
+      "fonte": "osm",
+      "osm_id": "node/903007983",
+      "estoque": [],
+      "id": 107
+    },
+    {
+      "nome": "Elctromed.Lda",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Infulene \"A\" Rua Impasse nr.4 Q-31, 4 Q-31",
+      "telefone": "843745792",
+      "horario": null,
+      "lat": -25.915549,
+      "lng": 32.519072,
+      "fonte": "osm",
+      "osm_id": "node/7252416786",
+      "estoque": [],
+      "id": 108
+    },
+    {
+      "nome": "Electromed.Lda",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Infulene\"A\" Rua Impasse nr.4 Q.31, 04",
+      "telefone": "843745792",
+      "horario": null,
+      "lat": -25.915919,
+      "lng": 32.519774,
+      "fonte": "osm",
+      "osm_id": "node/7252416787",
+      "estoque": [],
+      "id": 109
+    },
+    {
+      "nome": "Farmácia (Matola)",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Matola",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.932195,
+      "lng": 32.503222,
+      "fonte": "osm",
+      "osm_id": "node/8272408364",
+      "estoque": [],
+      "id": 110
+    },
+    {
+      "nome": "Farmácia (Matola)",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Matola",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.931679,
+      "lng": 32.478973,
+      "fonte": "osm",
+      "osm_id": "node/12143145346",
+      "estoque": [],
+      "id": 111
+    },
+    {
+      "nome": "Farmácia (Matola)",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Matola",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.912665,
+      "lng": 32.514226,
+      "fonte": "osm",
+      "osm_id": "way/1370402116",
+      "estoque": [],
+      "id": 112
+    },
+    {
+      "nome": "Farmácia da Matola Rio",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Matola",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.979527,
+      "lng": 32.434155,
+      "fonte": "osm",
+      "osm_id": "node/8269152713",
+      "estoque": [],
+      "id": 113
+    },
+    {
+      "nome": "Farmácia Tsuuka",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Matola",
+      "telefone": null,
+      "horario": null,
+      "lat": -26.013961,
+      "lng": 32.419978,
+      "fonte": "osm",
+      "osm_id": "node/13863784381",
+      "estoque": [],
+      "id": 114
+    },
+    {
+      "nome": "maphandane pharmacy",
+      "cidade": "Matola",
+      "provincia": "Maputo Província",
+      "endereco": "Matola",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.842803,
+      "lng": 32.514182,
+      "fonte": "osm",
+      "osm_id": "node/8394828717",
+      "estoque": [],
+      "id": 115
+    },
+    {
+      "nome": "Farmácia (Mavumira)",
+      "cidade": "Mavumira",
+      "provincia": "sofala",
+      "endereco": "Mavumira",
+      "telefone": null,
+      "horario": "Su-Fr 07:00-18:00",
+      "lat": -20.203301,
+      "lng": 34.153914,
+      "fonte": "osm",
+      "osm_id": "node/13639411827",
+      "estoque": [],
+      "id": 116
+    },
+    {
+      "nome": "Farmacia Monapo",
+      "cidade": "Monapo",
+      "provincia": "Nampula",
+      "endereco": "Monapo",
+      "telefone": null,
+      "horario": null,
+      "lat": -14.915984,
+      "lng": 40.298915,
+      "fonte": "osm",
+      "osm_id": "node/6482074041",
+      "estoque": [],
+      "id": 117
+    },
+    {
+      "nome": "Ekumi",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.119237,
+      "lng": 39.268461,
+      "fonte": "osm",
+      "osm_id": "node/4457979713",
+      "estoque": [],
+      "id": 118
+    },
+    {
+      "nome": "Farmácia (Nampula)",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.116261,
+      "lng": 39.264834,
+      "fonte": "osm",
+      "osm_id": "node/4457979721",
+      "estoque": [],
+      "id": 119
+    },
+    {
+      "nome": "Farmácia (Nampula)",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.116469,
+      "lng": 39.26633,
+      "fonte": "osm",
+      "osm_id": "node/4457979723",
+      "estoque": [],
+      "id": 120
+    },
+    {
+      "nome": "Farmacia Amanhecer",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.130299,
+      "lng": 39.288637,
+      "fonte": "osm",
+      "osm_id": "node/9444819910",
+      "estoque": [],
+      "id": 121
+    },
+    {
+      "nome": "Farmacia Ammar",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.136878,
+      "lng": 39.281485,
+      "fonte": "osm",
+      "osm_id": "node/3433751287",
+      "estoque": [],
+      "id": 122
+    },
+    {
+      "nome": "Farmacia Calendula",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Av. Eduardo Mondlane",
+      "telefone": null,
+      "horario": "Mo-Sa 08:00-18:00",
+      "lat": -15.117825,
+      "lng": 39.265414,
+      "fonte": "osm",
+      "osm_id": "node/4458010001",
+      "estoque": [],
+      "id": 123
+    },
+    {
+      "nome": "Farmacia Canani",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Avenida de Trabalho",
+      "telefone": null,
+      "horario": "Mo-Fr 09:00-17:00",
+      "lat": -15.113441,
+      "lng": 39.261285,
+      "fonte": "osm",
+      "osm_id": "node/10565099699",
+      "estoque": [],
+      "id": 124
+    },
+    {
+      "nome": "Farmácia Galáxia Azul",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Rua dos Sem Medo",
+      "telefone": "+258865765555",
+      "horario": "24/7",
+      "lat": -15.119209,
+      "lng": 39.250568,
+      "fonte": "osm",
+      "osm_id": "node/7840322285",
+      "estoque": [],
+      "id": 125
+    },
+    {
+      "nome": "Farmacia Monomotapa",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Rua Monomotapa",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.119669,
+      "lng": 39.264592,
+      "fonte": "osm",
+      "osm_id": "node/4460014992",
+      "estoque": [],
+      "id": 126
+    },
+    {
+      "nome": "Farmacia Prince",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.108851,
+      "lng": 39.226612,
+      "fonte": "osm",
+      "osm_id": "node/3414618131",
+      "estoque": [],
+      "id": 127
+    },
+    {
+      "nome": "Farmacia Soraya",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.115938,
+      "lng": 39.263831,
+      "fonte": "osm",
+      "osm_id": "node/9453877519",
+      "estoque": [],
+      "id": 128
+    },
+    {
+      "nome": "Mehdy",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.123526,
+      "lng": 39.258013,
+      "fonte": "osm",
+      "osm_id": "node/4458010005",
+      "estoque": [],
+      "id": 129
+    },
+    {
+      "nome": "Muhavire Pharmacy",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.131307,
+      "lng": 39.268304,
+      "fonte": "osm",
+      "osm_id": "node/3354721002",
+      "estoque": [],
+      "id": 130
+    },
+    {
+      "nome": "Pharmacy 25 de Setembro",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.121976,
+      "lng": 39.257261,
+      "fonte": "osm",
+      "osm_id": "node/3354698401",
+      "estoque": [],
+      "id": 131
+    },
+    {
+      "nome": "Pharmacy Central",
+      "cidade": "Nampula",
+      "provincia": "Nampula",
+      "endereco": "Nampula",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.126377,
+      "lng": 39.264226,
+      "fonte": "osm",
+      "osm_id": "node/3354720994",
+      "estoque": [],
+      "id": 132
+    },
+    {
+      "nome": "Farmácia (e Armazem) de Médicos Sem Fronteiras",
+      "cidade": "Pemba",
+      "provincia": "Cabo Delgado",
+      "endereco": "Pemba",
+      "telefone": null,
+      "horario": null,
+      "lat": -12.984896,
+      "lng": 40.539118,
+      "fonte": "osm",
+      "osm_id": "node/8540698377",
+      "estoque": [],
+      "id": 133
+    },
+    {
+      "nome": "Farmacia Juma",
+      "cidade": "Pemba",
+      "provincia": "Cabo Delgado",
+      "endereco": "Estrada Nacional N1",
+      "telefone": null,
+      "horario": "Mo-Sa 08:00-18:00",
+      "lat": -12.990827,
+      "lng": 40.528678,
+      "fonte": "osm",
+      "osm_id": "node/5614986373",
+      "estoque": [],
+      "id": 134
+    },
+    {
+      "nome": "Farmácia MSF",
+      "cidade": "Pemba",
+      "provincia": "Cabo Delgado",
+      "endereco": "Pemba",
+      "telefone": null,
+      "horario": null,
+      "lat": -12.966948,
+      "lng": 40.3786,
+      "fonte": "osm",
+      "osm_id": "way/954369511",
+      "estoque": [],
+      "id": 135
+    },
+    {
+      "nome": "Farmácia (Ponta do Ouro)",
+      "cidade": "Ponta do Ouro",
+      "provincia": "Maputo Província",
+      "endereco": "Ponta do Ouro",
+      "telefone": null,
+      "horario": null,
+      "lat": -26.842269,
+      "lng": 32.886599,
+      "fonte": "osm",
+      "osm_id": "node/4485783190",
+      "estoque": [],
+      "id": 136
+    },
+    {
+      "nome": "Lavega Pharmacy",
+      "cidade": "Ponta do Ouro",
+      "provincia": "Maputo Província",
+      "endereco": "Ponta do Ouro",
+      "telefone": null,
+      "horario": "Mo-Sa 08:00-18:00; Su 11:00-18:00",
+      "lat": -26.842293,
+      "lng": 32.886589,
+      "fonte": "osm",
+      "osm_id": "node/4473106889",
+      "estoque": [],
+      "id": 137
+    },
+    {
+      "nome": "Farmácia Brandão",
+      "cidade": "Quelimane",
+      "provincia": "Zambézia",
+      "endereco": "Quelimane",
+      "telefone": null,
+      "horario": null,
+      "lat": -17.86358,
+      "lng": 36.893776,
+      "fonte": "osm",
+      "osm_id": "way/458296694",
+      "estoque": [],
+      "id": 138
+    },
+    {
+      "nome": "Farmácia Calendula",
+      "cidade": "Quelimane",
+      "provincia": "Zambézia",
+      "endereco": "Quelimane",
+      "telefone": null,
+      "horario": null,
+      "lat": -17.878402,
+      "lng": 36.886314,
+      "fonte": "osm",
+      "osm_id": "node/5872336589",
+      "estoque": [],
+      "id": 139
+    },
+    {
+      "nome": "Farmacia Lisboa",
+      "cidade": "Quelimane",
+      "provincia": "Zambézia",
+      "endereco": "Quelimane",
+      "telefone": null,
+      "horario": null,
+      "lat": -17.866484,
+      "lng": 36.89161,
+      "fonte": "osm",
+      "osm_id": "node/7118811288",
+      "estoque": [],
+      "id": 140
+    },
+    {
+      "nome": "Farmácia Muzinga",
+      "cidade": "Quelimane",
+      "provincia": "Zambézia",
+      "endereco": "Quelimane",
+      "telefone": null,
+      "horario": null,
+      "lat": -17.870676,
+      "lng": 36.887608,
+      "fonte": "osm",
+      "osm_id": "node/5869313485",
+      "estoque": [],
+      "id": 141
+    },
+    {
+      "nome": "Farmacia Clara",
+      "cidade": "Songo",
+      "provincia": "Tete",
+      "endereco": "Songo",
+      "telefone": null,
+      "horario": "Mo-Sa 08:00-20:00",
+      "lat": -15.613896,
+      "lng": 32.771573,
+      "fonte": "osm",
+      "osm_id": "way/1054097715",
+      "estoque": [],
+      "id": 142
+    },
+    {
+      "nome": "Farmácia de Songo",
+      "cidade": "Songo",
+      "provincia": "Tete",
+      "endereco": "Songo",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.613235,
+      "lng": 32.770911,
+      "fonte": "osm",
+      "osm_id": "node/7787777684",
+      "estoque": [],
+      "id": 143
+    },
+    {
+      "nome": "Farmacia SMART",
+      "cidade": "Songo",
+      "provincia": "Tete",
+      "endereco": "Songo",
+      "telefone": null,
+      "horario": null,
+      "lat": -15.599294,
+      "lng": 32.76287,
+      "fonte": "osm",
+      "osm_id": "node/11671635539",
+      "estoque": [],
+      "id": 144
+    },
+    {
+      "nome": "Farmácia (Terceiro Bairro)",
+      "cidade": "Terceiro Bairro",
+      "provincia": "Gaza",
+      "endereco": "Terceiro Bairro",
+      "telefone": null,
+      "horario": "mo-sa 07:00-17:01",
+      "lat": -24.221654,
+      "lng": 32.713584,
+      "fonte": "osm",
+      "osm_id": "node/13634521812",
+      "estoque": [],
+      "id": 145
+    },
+    {
+      "nome": "Farmacia Govind",
+      "cidade": "Tete",
+      "provincia": "Tete",
+      "endereco": "Tete",
+      "telefone": null,
+      "horario": null,
+      "lat": -16.159426,
+      "lng": 33.583971,
+      "fonte": "osm",
+      "osm_id": "node/2302824723",
+      "estoque": [],
+      "id": 146
+    },
+    {
+      "nome": "Farmácia Kuhanha",
+      "cidade": "Vilankulo",
+      "provincia": "Inhambane",
+      "endereco": "Vilankulo",
+      "telefone": null,
+      "horario": null,
+      "lat": -21.990314,
+      "lng": 35.318951,
+      "fonte": "osm",
+      "osm_id": "node/4809520920",
+      "estoque": [],
+      "id": 147
+    },
+    {
+      "nome": "Farmácia Ricardina",
+      "cidade": "Vilankulo",
+      "provincia": "Inhambane",
+      "endereco": "Vilankulo",
+      "telefone": null,
+      "horario": null,
+      "lat": -22.00008,
+      "lng": 35.318793,
+      "fonte": "osm",
+      "osm_id": "node/5867455355",
+      "estoque": [],
+      "id": 148
+    },
+    {
+      "nome": "Farmácia (Xai-Xai)",
+      "cidade": "Xai-Xai",
+      "provincia": "Gaza",
+      "endereco": "Xai-Xai",
+      "telefone": null,
+      "horario": null,
+      "lat": -25.045306,
+      "lng": 33.64297,
+      "fonte": "osm",
+      "osm_id": "node/561311280",
+      "estoque": [],
+      "id": 149
+    },
+    {
+      "nome": "clinica de chilembene",
+      "cidade": "xilembene-sede",
+      "provincia": "gaza",
+      "endereco": "xilembene-sede",
+      "telefone": null,
+      "horario": "Mo-Sun 00:00-24:00",
+      "lat": -24.690828,
+      "lng": 33.252407,
+      "fonte": "osm",
+      "osm_id": "node/13633566843",
+      "estoque": [],
+      "id": 150
+    }
   ],
   "localidades": [
-    { "nome": "Maputo", "sinonimos": ["cidade de maputo", "polana", "baixa", "sommerschield", "alto mae", "malhangalene"], "lat": -25.9692, "lng": 32.5732 },
-    { "nome": "Matola", "sinonimos": ["machava", "matola rio"], "lat": -25.9622, "lng": 32.4589 },
-    { "nome": "Xai-Xai", "sinonimos": ["xai xai", "xaixai", "gaza"], "lat": -25.0519, "lng": 33.6442 },
-    { "nome": "Inhambane", "sinonimos": ["maxixe", "tofo"], "lat": -23.8650, "lng": 35.3833 },
-    { "nome": "Beira", "sinonimos": ["sofala", "macuti", "dondo"], "lat": -19.8436, "lng": 34.8389 },
-    { "nome": "Chimoio", "sinonimos": ["manica"], "lat": -19.1164, "lng": 33.4833 },
-    { "nome": "Tete", "sinonimos": ["moatize"], "lat": -16.1564, "lng": 33.5867 },
-    { "nome": "Quelimane", "sinonimos": ["zambezia", "mocuba"], "lat": -17.8786, "lng": 36.8883 },
-    { "nome": "Nampula", "sinonimos": ["muhala"], "lat": -15.1165, "lng": 39.2666 },
-    { "nome": "Nacala", "sinonimos": ["nacala porto", "nacala-porto"], "lat": -14.5428, "lng": 40.6728 },
-    { "nome": "Pemba", "sinonimos": ["cabo delgado"], "lat": -12.9740, "lng": 40.5178 },
-    { "nome": "Lichinga", "sinonimos": ["niassa"], "lat": -13.3128, "lng": 35.2406 }
+    {
+      "nome": "Maputo",
+      "sinonimos": [
+        "cidade de maputo",
+        "polana",
+        "baixa",
+        "sommerschield",
+        "alto mae",
+        "malhangalene"
+      ],
+      "lat": -25.9692,
+      "lng": 32.5732,
+      "provincia": "Maputo Cidade"
+    },
+    {
+      "nome": "Matola",
+      "sinonimos": [
+        "machava",
+        "matola rio"
+      ],
+      "lat": -25.9622,
+      "lng": 32.4589,
+      "provincia": "Maputo Província"
+    },
+    {
+      "nome": "Xai-Xai",
+      "sinonimos": [
+        "xai xai",
+        "xaixai",
+        "gaza"
+      ],
+      "lat": -25.0519,
+      "lng": 33.6442,
+      "provincia": "Gaza"
+    },
+    {
+      "nome": "Inhambane",
+      "sinonimos": [
+        "maxixe",
+        "tofo"
+      ],
+      "lat": -23.865,
+      "lng": 35.3833,
+      "provincia": "Inhambane"
+    },
+    {
+      "nome": "Beira",
+      "sinonimos": [
+        "sofala",
+        "macuti",
+        "dondo"
+      ],
+      "lat": -19.8436,
+      "lng": 34.8389,
+      "provincia": "Sofala"
+    },
+    {
+      "nome": "Chimoio",
+      "sinonimos": [
+        "manica"
+      ],
+      "lat": -19.1164,
+      "lng": 33.4833,
+      "provincia": "Manica"
+    },
+    {
+      "nome": "Tete",
+      "sinonimos": [
+        "moatize"
+      ],
+      "lat": -16.1564,
+      "lng": 33.5867,
+      "provincia": "Tete"
+    },
+    {
+      "nome": "Quelimane",
+      "sinonimos": [
+        "zambezia",
+        "mocuba"
+      ],
+      "lat": -17.8786,
+      "lng": 36.8883,
+      "provincia": "Zambézia"
+    },
+    {
+      "nome": "Nampula",
+      "sinonimos": [
+        "muhala"
+      ],
+      "lat": -15.1165,
+      "lng": 39.2666,
+      "provincia": "Nampula"
+    },
+    {
+      "nome": "Nacala",
+      "sinonimos": [
+        "nacala porto",
+        "nacala-porto"
+      ],
+      "lat": -14.5428,
+      "lng": 40.6728,
+      "provincia": "Nampula"
+    },
+    {
+      "nome": "Pemba",
+      "sinonimos": [
+        "cabo delgado"
+      ],
+      "lat": -12.974,
+      "lng": 40.5178,
+      "provincia": "Cabo Delgado"
+    },
+    {
+      "nome": "Lichinga",
+      "sinonimos": [
+        "niassa"
+      ],
+      "lat": -13.3128,
+      "lng": 35.2406,
+      "provincia": "Niassa"
+    },
+    {
+      "nome": "Boane",
+      "sinonimos": [],
+      "provincia": "Maputo Província",
+      "lat": -26.045,
+      "lng": 32.327
+    },
+    {
+      "nome": "Manhiça",
+      "sinonimos": [
+        "manhica"
+      ],
+      "provincia": "Maputo Província",
+      "lat": -25.402,
+      "lng": 32.807
+    },
+    {
+      "nome": "Marracuene",
+      "sinonimos": [],
+      "provincia": "Maputo Província",
+      "lat": -25.738,
+      "lng": 32.679
+    },
+    {
+      "nome": "Namaacha",
+      "sinonimos": [],
+      "provincia": "Maputo Província",
+      "lat": -25.976,
+      "lng": 32.028
+    },
+    {
+      "nome": "Bela Vista",
+      "sinonimos": [
+        "matutuine"
+      ],
+      "provincia": "Maputo Província",
+      "lat": -26.335,
+      "lng": 32.666
+    },
+    {
+      "nome": "Chókwè",
+      "sinonimos": [
+        "chokwe"
+      ],
+      "provincia": "Gaza",
+      "lat": -24.533,
+      "lng": 33
+    },
+    {
+      "nome": "Chibuto",
+      "sinonimos": [],
+      "provincia": "Gaza",
+      "lat": -24.687,
+      "lng": 33.531
+    },
+    {
+      "nome": "Maxixe",
+      "sinonimos": [],
+      "provincia": "Inhambane",
+      "lat": -23.86,
+      "lng": 35.347
+    },
+    {
+      "nome": "Inharrime",
+      "sinonimos": [],
+      "provincia": "Inhambane",
+      "lat": -24.483,
+      "lng": 35.017
+    },
+    {
+      "nome": "Vilankulo",
+      "sinonimos": [
+        "vilanculos",
+        "vilanculo"
+      ],
+      "provincia": "Inhambane",
+      "lat": -22,
+      "lng": 35.317
+    },
+    {
+      "nome": "Massinga",
+      "sinonimos": [],
+      "provincia": "Inhambane",
+      "lat": -23.326,
+      "lng": 35.383
+    },
+    {
+      "nome": "Dondo",
+      "sinonimos": [],
+      "provincia": "Sofala",
+      "lat": -19.609,
+      "lng": 34.743
+    },
+    {
+      "nome": "Caia",
+      "sinonimos": [],
+      "provincia": "Sofala",
+      "lat": -17.832,
+      "lng": 35.339
+    },
+    {
+      "nome": "Manica",
+      "sinonimos": [],
+      "provincia": "Manica",
+      "lat": -18.935,
+      "lng": 32.876
+    },
+    {
+      "nome": "Gondola",
+      "sinonimos": [],
+      "provincia": "Manica",
+      "lat": -19.098,
+      "lng": 33.641
+    },
+    {
+      "nome": "Moatize",
+      "sinonimos": [],
+      "provincia": "Tete",
+      "lat": -16.104,
+      "lng": 33.733
+    },
+    {
+      "nome": "Songo",
+      "sinonimos": [
+        "vila de songo",
+        "cahora bassa"
+      ],
+      "provincia": "Tete",
+      "lat": -15.606,
+      "lng": 32.771
+    },
+    {
+      "nome": "Mocuba",
+      "sinonimos": [],
+      "provincia": "Zambézia",
+      "lat": -16.839,
+      "lng": 36.985
+    },
+    {
+      "nome": "Gurué",
+      "sinonimos": [
+        "gurue"
+      ],
+      "provincia": "Zambézia",
+      "lat": -15.464,
+      "lng": 36.987
+    },
+    {
+      "nome": "Angoche",
+      "sinonimos": [],
+      "provincia": "Nampula",
+      "lat": -16.232,
+      "lng": 39.908
+    },
+    {
+      "nome": "Monapo",
+      "sinonimos": [],
+      "provincia": "Nampula",
+      "lat": -14.922,
+      "lng": 40.305
+    },
+    {
+      "nome": "Ilha de Moçambique",
+      "sinonimos": [
+        "ilha de mocambique",
+        "ilha"
+      ],
+      "provincia": "Nampula",
+      "lat": -15.034,
+      "lng": 40.735
+    },
+    {
+      "nome": "Cuamba",
+      "sinonimos": [],
+      "provincia": "Niassa",
+      "lat": -14.803,
+      "lng": 36.537
+    },
+    {
+      "nome": "Montepuez",
+      "sinonimos": [],
+      "provincia": "Cabo Delgado",
+      "lat": -13.126,
+      "lng": 38.999
+    },
+    {
+      "nome": "Mocímboa da Praia",
+      "sinonimos": [
+        "mocimboa da praia",
+        "mocimboa"
+      ],
+      "provincia": "Cabo Delgado",
+      "lat": -11.35,
+      "lng": 40.35
+    },
+    {
+      "nome": "Mueda",
+      "sinonimos": [],
+      "provincia": "Cabo Delgado",
+      "lat": -11.65,
+      "lng": 39.55
+    },
+    {
+      "nome": "Ponta do Ouro",
+      "sinonimos": [
+        "ponta d ouro"
+      ],
+      "provincia": "Maputo Província",
+      "lat": -26.846,
+      "lng": 32.89
+    }
   ],
   "perguntas": [
-    { "palavras": ["horario", "horarios", "aberto", "abre", "fecha"], "resposta": "Os horários variam por farmácia. Pergunte por um medicamento e eu mostro o horário de cada farmácia próxima." },
-    { "palavras": ["entrega", "entregam", "delivery"], "resposta": "Algumas farmácias fazem entrega na zona. Contacte a farmácia pelo telefone indicado nos resultados para confirmar." },
-    { "palavras": ["receita", "prescricao", "prescrição"], "resposta": "Antibióticos como Amoxicilina, Cotrimoxazol e Metronidazol requerem receita médica. Analgésicos comuns não precisam." }
-  ]
+    {
+      "palavras": [
+        "horario",
+        "horarios",
+        "aberto",
+        "abre",
+        "fecha"
+      ],
+      "resposta": "Os horários variam por farmácia. Pergunte por um medicamento e eu mostro o horário de cada farmácia próxima."
+    },
+    {
+      "palavras": [
+        "entrega",
+        "entregam",
+        "delivery"
+      ],
+      "resposta": "Algumas farmácias fazem entrega na zona. Contacte a farmácia pelo telefone indicado nos resultados para confirmar."
+    },
+    {
+      "palavras": [
+        "receita",
+        "prescricao",
+        "prescrição"
+      ],
+      "resposta": "Antibióticos como Amoxicilina, Cotrimoxazol e Metronidazol requerem receita médica. Analgésicos comuns não precisam."
+    }
+  ],
+  "actualizado_em": "2026-09-01T21:04:36.292Z"
 }
