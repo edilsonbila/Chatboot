@@ -207,4 +207,14 @@ function responder({ pergunta = '', lat, lng }) {
     return { resposta: blocos.join('<br><br>'), sugestoes, farmacias: farmaciasResposta };
 }
 
-module.exports = { responder, normalizar, haversineKm };
+function analisarPergunta(pergunta, lat, lng) {
+    const textoNorm = normalizar(pergunta || '');
+    const medicamentos = encontrarMedicamentos(textoNorm);
+    const localidade = encontrarLocalidade(textoNorm);
+    let origem = null;
+    if (localidade) origem = { lat: localidade.lat, lng: localidade.lng };
+    else if (Number.isFinite(lat) && Number.isFinite(lng)) origem = { lat, lng };
+    return { medicamentos, localidade: localidade || null, origem };
+}
+
+module.exports = { responder, analisarPergunta, farmaciasProximas, normalizar, haversineKm, dados };
