@@ -123,3 +123,15 @@ body {
 .chat-button:hover {
     background-color: #0056b3;
 }
+
+.chat-header small {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.75em;
+    opacity: 0.85;
+}
+
+.chat-response {
+    line-height: 1.45;
+    word-break: break-word;
+}
